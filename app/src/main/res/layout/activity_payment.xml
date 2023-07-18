@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/select_type_TextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Select Type"
+        app:boxStrokeColor="#3ab54a"
+        app:endIconTint="@color/black"
+        app:hintTextColor="#3ab54a"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/guideline1">
+
+        <AutoCompleteTextView
+            android:id="@+id/select_type_autoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            tools:ignore="LabelFor,TextContrastCheck" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/year_TextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="Select Year"
+        app:boxStrokeColor="#3ab54a"
+        app:endIconTint="@color/black"
+        app:hintTextColor="#3ab54a"
+        app:layout_constraintStart_toStartOf="@+id/select_type_TextInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/select_type_TextInputLayout">
+
+        <AutoCompleteTextView
+            android:id="@+id/year_autoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            tools:ignore="LabelFor,TextContrastCheck" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/month_TextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="select Month"
+        app:boxStrokeColor="#3ab54a"
+        app:endIconTint="@color/black"
+        app:hintTextColor="#3ab54a"
+        app:layout_constraintEnd_toEndOf="@+id/select_type_TextInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/select_type_TextInputLayout">
+
+        <AutoCompleteTextView
+            android:id="@+id/month_autoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            tools:ignore="LabelFor,TextContrastCheck" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/card_number_edittext"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_input"
+        android:hint="Card Number"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="16"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColorHint="#878787"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/year_TextInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/year_TextInputLayout"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/expiry_date_edittext"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_input"
+        android:hint="Expiry Date"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:maxLength="7"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColorHint="#878787"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/card_number_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/card_number_edittext"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/cvv_edittext"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_input"
+        android:hint="CVV"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="3"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColorHint="#878787"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/card_number_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/card_number_edittext"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/name_edittext"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_input"
+        android:hint="Name"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:maxLength="20"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColorHint="#878787"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/expiry_date_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/expiry_date_edittext"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/land_area_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textColor="#3ab54a"
+        app:layout_constraintBottom_toTopOf="@+id/amount_edittext"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/amount_edittext" />
+
+    <EditText
+        android:id="@+id/amount_edittext"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:hint="0"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="8"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColorHint="#878787"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/name_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/name_edittext"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pay_now_button"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_button"
+        android:text="Pay Now"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/amount_edittext"
+        app:layout_constraintStart_toStartOf="@+id/amount_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/amount_edittext"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

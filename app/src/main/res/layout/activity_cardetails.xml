@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardetailsActivity">
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="285dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_button"
+        android:text="Uplode"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/email_et"
+        app:layout_constraintStart_toStartOf="@+id/email_et"
+        app:layout_constraintTop_toBottomOf="@+id/email_et" />
+
+    <EditText
+        android:id="@+id/email_et"
+        android:layout_width="285dp"
+        android:layout_height="48dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="Modal"
+        android:textColorHint="#8A8A8A"
+        android:paddingStart="12dp"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/name_et"
+        app:layout_constraintStart_toStartOf="@+id/name_et"
+        app:layout_constraintTop_toBottomOf="@+id/name_et"
+        tools:ignore="RtlSymmetry,TextFields,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/name_et"
+        android:layout_width="285dp"
+        android:layout_height="48dp"
+        android:autofillHints="name"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="Make"
+        android:textColorHint="#8A8A8A"
+        android:paddingStart="12dp"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        tools:ignore="RtlSymmetry,TextFields,TextContrastCheck" />
+
+
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.206" />
+
+    <ImageView
+        android:id="@+id/add_image"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image"
+        app:layout_constraintVertical_bias="0.855"
+        app:srcCompat="@drawable/ic_add_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
